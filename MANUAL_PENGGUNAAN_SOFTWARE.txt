@@ -1,0 +1,389 @@
+================================================================================
+                    BUKU PANDUAN PENGGUNAAN SOFTWARE
+================================================================================
+
+                       SISTEM INFORMASI MANAJEMEN JEMAAT
+                                  IFLC
+
+              International Father Love Church — Satelit Semarang
+
+--------------------------------------------------------------------------------
+
+Nama Aplikasi   : SIMJ IFLC
+URL Akses       : jadwal-iflc.freedev.app
+Versi           : 1.0
+Platform        : Web Application (PHP + MySQL)
+Hosting         : InfinityFree (Cloud Web Hosting)
+
+--------------------------------------------------------------------------------
+
+TIM PENGEMBANG:
+  - Elysia                            — 23.K1.0001 (Frontend Developer)
+  - Alexander Zhevano Allen Andiko    — 23.K1.0028 (Backend Developer)
+  - Michael Yoan Pratama              — 23.K1.0047 (Project Manager & Lead Full Stack)
+  - Yanto Yordan Kotouki              — 23.K1.0055 (QA & DevOps)
+
+Program Studi Teknik Informatika
+Fakultas Ilmu Komputer
+Universitas Katolik Soegijapranata Semarang
+
+Dosen Pembimbing Workshop   : Dr. Shinta Estri Wahyuningrum, S.Si., M.Cs
+Dosen Pembimbing Lapangan   : Jaya Sutanto
+
+Semarang, Juli 2026
+
+
+================================================================================
+                              DAFTAR ISI
+================================================================================
+
+1.  Cara Mengakses Aplikasi
+2.  Halaman Publik — Melihat Jadwal Ibadah
+3.  Login ke Admin Panel
+4.  Dashboard — Ringkasan Informasi
+5.  Mengelola Data Jemaat Umum
+6.  Mengelola Petugas Pelayanan
+7.  Mengelola Jadwal Pelayanan
+8.  Mengelola Jenis Kegiatan
+9.  Melihat Laporan Kegiatan
+10. Logout (Keluar)
+11. FAQ — Pertanyaan Umum
+
+
+================================================================================
+1. CARA MENGAKSES APLIKASI
+================================================================================
+
+Aplikasi SIMJ IFLC dapat diakses dari perangkat apa saja (laptop, komputer, 
+atau smartphone) yang memiliki browser dan koneksi internet.
+
+Langkah:
+  1) Buka browser di perangkat Anda (Google Chrome, Safari, Firefox, atau Edge).
+  2) Ketik alamat berikut di address bar:
+
+     +--------------------------------------+------------------------------------------------+
+     | Untuk Siapa                          | Alamat (URL)                                   |
+     +--------------------------------------+------------------------------------------------+
+     | Jemaat — melihat jadwal ibadah       | https://jadwal-iflc.freedev.app/               |
+     | Admin — mengelola data & jadwal      | https://jadwal-iflc.freedev.app/               |
+     |                                      |   manajemen-iflc/login.php                     |
+     +--------------------------------------+------------------------------------------------+
+
+  3) Pastikan perangkat terhubung ke internet.
+
+[CATATAN]
+Halaman jemaat bisa diakses langsung tanpa login. 
+Halaman admin memerlukan username & password.
+
+
+================================================================================
+2. HALAMAN PUBLIK — MELIHAT JADWAL IBADAH
+================================================================================
+
+Halaman ini ditujukan untuk seluruh jemaat. Tidak perlu login — cukup buka 
+browser dan akses: https://jadwal-iflc.freedev.app/
+
+Apa yang bisa dilakukan di halaman ini?
+
+  1) MELIHAT JADWAL MENDATANG
+     Semua jadwal ibadah yang berstatus "Mendatang" akan ditampilkan secara 
+     otomatis, diurutkan dari yang terdekat.
+
+  2) FILTER JENIS IBADAH
+     Klik tombol "Ibadah Raya" atau "Komsel" di bagian atas untuk memfilter. 
+     Klik "Semua" untuk menampilkan kembali semua jadwal.
+
+  3) LIHAT PETUGAS
+     Klik tombol "Lihat Petugas" pada kartu jadwal untuk melihat daftar 
+     petugas yang bertugas beserta perannya.
+
+[CATATAN]
+Jadwal hari ini akan otomatis membuka daftar petugasnya. 
+Pembicara/Pendeta ditampilkan terpisah dengan highlight warna kuning.
+
+
+================================================================================
+3. LOGIN KE ADMIN PANEL
+================================================================================
+
+Untuk mengelola data dan jadwal, admin perlu login terlebih dahulu.
+
+Langkah Login:
+  1) Buka https://jadwal-iflc.freedev.app/manajemen-iflc/login.php
+  2) Masukkan Username dan Password pada form yang tersedia.
+  3) Klik ikon mata jika ingin melihat password yang diketik.
+  4) Klik tombol "Masuk ke Dashboard".
+  5) Jika berhasil, Anda akan masuk ke halaman Dashboard. 
+     Jika gagal, pesan error akan muncul di atas form.
+
+Akun Default:
+  - Username : admin
+  - Password : admin123
+
+
+================================================================================
+4. DASHBOARD — RINGKASAN INFORMASI
+================================================================================
+
+Dashboard adalah halaman pertama yang tampil setelah login. Di sini admin 
+dapat melihat ringkasan seluruh data secara sekilas.
+
+Informasi yang Ditampilkan:
+
+  +----------------------+------------------------------------------------------------+
+  | Bagian               | Penjelasan                                                 |
+  +----------------------+------------------------------------------------------------+
+  | Kartu Statistik      | Total jemaat, jadwal bulan ini, jadwal mendatang, total     |
+  |                      | divisi, dan total penugasan                                |
+  | Jadwal Mendatang     | 5 jadwal ibadah terdekat beserta jumlah petugas             |
+  | Grafik               | Distribusi persentase jenis kegiatan dalam 30 hari terakhir|
+  | Kegiatan Bulan Ini   | Tabel lengkap kegiatan bulan berjalan                      |
+  +----------------------+------------------------------------------------------------+
+
+Navigasi Menu (Sidebar Kiri):
+  - Dashboard           → Halaman ringkasan (halaman ini)
+  - Data Jemaat Umum    → Kelola data anggota jemaat
+  - Petugas Pelayanan   → Kelola petugas & divisi
+  - Jadwal Pelayanan    → Kelola jadwal ibadah
+  - Laporan Kegiatan    → Lihat rekapitulasi
+  - Halaman Publik      → Buka halaman jemaat (tab baru)
+  - Logout              → Keluar dari admin
+
+
+================================================================================
+5. MENGELOLA DATA JEMAAT UMUM
+================================================================================
+
+Menu ini digunakan untuk mencatat data seluruh anggota jemaat IFLC secara umum.
+Data ini menjadi sumber utama saat mendaftarkan petugas pelayanan.
+
+--- MENAMBAH JEMAAT BARU ---
+
+  1) Klik tombol "Tambah Jemaat" di atas tabel.
+  2) Isi data pada form yang muncul:
+     - Nama Lengkap     (wajib diisi)
+     - Tempat Lahir     (opsional)
+     - Tanggal Lahir    (opsional)
+     - No. HP/WhatsApp  (opsional)
+     - Alamat           (opsional)
+  3) Klik tombol "Simpan". Data jemaat baru akan muncul di tabel.
+
+--- MENGEDIT DATA JEMAAT ---
+
+  1) Klik tombol "Edit" pada baris jemaat yang ingin diubah.
+  2) Ubah data yang diperlukan, lalu klik "Update".
+
+--- MENGHAPUS DATA JEMAAT ---
+
+  1) Klik tombol "Hapus" pada baris jemaat yang ingin dihapus.
+  2) Konfirmasi penghapusan pada dialog yang muncul.
+
+[PERINGATAN]
+Jemaat yang sudah terdaftar sebagai petugas pelayanan tidak bisa dihapus. 
+Hapus dulu data petugasnya di menu "Petugas Pelayanan".
+
+
+================================================================================
+6. MENGELOLA PETUGAS PELAYANAN
+================================================================================
+
+Menu ini digunakan untuk mendaftarkan jemaat sebagai petugas pelayanan aktif 
+dan menempatkannya ke divisi tertentu.
+
+--- MENAMBAH PETUGAS BARU ---
+
+  1) Klik tombol "Tambah Petugas".
+  2) Pilih Nama Jemaat dari dropdown (nama diambil dari data Jemaat Umum).
+  3) Pilih Divisi pelayanan.
+  4) Klik "Simpan". Petugas baru akan muncul di tabel.
+
+Divisi Pelayanan yang Tersedia:
+  - Worship
+  - Multimedia
+  - Penyambut Tamu
+  - Doa & Syafaat
+  - Anak & Remaja
+  - Keamanan
+  - Pendeta / Hamba Tuhan
+
+--- MENGEDIT PETUGAS ---
+
+  1) Klik tombol "Edit" pada baris petugas yang ingin diubah.
+  2) Ubah divisi atau data lainnya, lalu klik "Update".
+
+--- MENGHAPUS PETUGAS ---
+
+  1) Klik tombol "Hapus" pada baris petugas yang ingin dihapus.
+  2) Konfirmasi penghapusan pada dialog yang muncul.
+
+[CATATAN]
+Satu jemaat hanya bisa didaftarkan satu kali sebagai petugas. 
+Jika nama sudah terdaftar, sistem akan menampilkan peringatan.
+
+
+================================================================================
+7. MENGELOLA JADWAL PELAYANAN
+================================================================================
+
+Ini adalah menu utama aplikasi. Di sini admin membuat jadwal ibadah dan 
+menugaskan petugas yang bertugas.
+
+--- MEMBUAT JADWAL BARU ---
+
+  1) Klik tombol "Tambah Jadwal".
+  2) Isi data jadwal:
+     - Tanggal          → Pilih tanggal pelaksanaan (wajib)
+     - Waktu            → Isi jam mulai, contoh: 08:00 (wajib)
+     - Jenis Ibadah     → Pilih: Ibadah Raya, Komsel, atau lainnya (wajib)
+     - Tema             → Tema khotbah / kegiatan (opsional)
+     - Lokasi           → Tempat pelaksanaan (opsional)
+     - Pembicara Tamu   → Nama pembicara jika ada (opsional)
+     - Jumlah Hadir     → Diisi setelah kegiatan selesai (opsional)
+  3) Klik "Simpan". 
+     Jadwal baru otomatis berstatus "Mendatang" dan langsung tampil 
+     di halaman publik.
+
+--- MENUGASKAN PETUGAS KE JADWAL ---
+
+  1) Pada tabel jadwal, klik tombol "Detail" untuk membuka detail jadwal.
+  2) Di bagian "Tambah Petugas", pilih nama petugas dari dropdown.
+  3) Isi Peran petugas (contoh: Singer Lead, Operator Slide, Worship Leader).
+  4) Klik "Tambah". Petugas akan muncul di daftar petugas jadwal tersebut.
+
+--- CLASH DETECTION (DETEKSI BENTROK JADWAL) ---
+
+  Sistem akan OTOMATIS MENOLAK penugasan jika seorang petugas sudah 
+  dijadwalkan di jadwal lain pada TANGGAL DAN WAKTU YANG SAMA. 
+  Ini mencegah satu orang bertugas di dua tempat sekaligus.
+
+  Contoh:
+  - Samuel sudah ditugaskan di Ibadah Raya, 4 Mei 2026 jam 08:00
+  - Admin mencoba menugaskan Samuel di jadwal lain pada tanggal & jam sama
+  - Hasil: Sistem menampilkan peringatan "Petugas Samuel sudah memiliki 
+    tugas di jam ini" dan MENOLAK penugasan
+
+--- MENGUBAH STATUS JADWAL ---
+
+  1) Klik tombol "Edit" pada jadwal yang ingin diubah statusnya.
+  2) Ubah Status sesuai keadaan:
+     - Mendatang    → Belum dilaksanakan (tampil di halaman publik)
+     - Selesai      → Sudah selesai dilaksanakan
+     - Dibatalkan   → Jadwal dibatalkan
+  3) Klik "Update".
+
+--- MENGHAPUS PETUGAS DARI JADWAL ---
+
+  1) Pada halaman detail jadwal, klik tombol "Hapus" di samping nama petugas.
+  2) Petugas akan dihapus dari jadwal tersebut (data petugas utama tidak 
+     terpengaruh).
+
+
+================================================================================
+8. MENGELOLA JENIS KEGIATAN
+================================================================================
+
+Selain jenis ibadah tetap (Ibadah Raya, Komsel, dll.), admin bisa menambahkan 
+jenis kegiatan baru yang akan muncul di dropdown saat membuat jadwal.
+
+--- MENAMBAH JENIS KEGIATAN BARU ---
+
+  1) Klik tombol "Tambah Jenis".
+  2) Isi Nama Jenis Kegiatan (contoh: Ibadah Padang, Retreat, 
+     Doa Semalam Suntuk).
+  3) Isi Deskripsi singkat (opsional).
+  4) Klik "Simpan". 
+     Jenis kegiatan baru otomatis muncul di dropdown saat membuat jadwal.
+
+--- MENGEDIT JENIS KEGIATAN ---
+
+  1) Klik tombol "Edit" pada baris jenis kegiatan yang ingin diubah.
+  2) Ubah nama atau deskripsi, lalu klik "Update".
+
+--- MENGHAPUS JENIS KEGIATAN ---
+
+  1) Klik tombol "Hapus" pada baris jenis kegiatan yang ingin dihapus.
+  2) Konfirmasi penghapusan pada dialog yang muncul.
+
+
+================================================================================
+9. MELIHAT LAPORAN KEGIATAN
+================================================================================
+
+Menu laporan menampilkan rekapitulasi seluruh kegiatan ibadah dalam 
+periode tertentu.
+
+Cara Melihat Laporan:
+
+  1) Buka menu "Laporan Kegiatan" dari sidebar.
+  2) Pilih Bulan dan Tahun yang ingin dilihat.
+  3) Pilih Jenis Kegiatan jika ingin memfilter (opsional — bisa pilih "Semua").
+  4) Klik "Filter" untuk menampilkan laporan.
+
+Informasi yang Ditampilkan:
+  - Tanggal & waktu setiap kegiatan
+  - Jenis ibadah
+  - Tema khotbah
+  - Status (Mendatang / Selesai / Dibatalkan)
+  - Jumlah petugas yang bertugas
+  - Jumlah kehadiran jemaat (jika sudah diisi)
+
+
+================================================================================
+10. LOGOUT (KELUAR)
+================================================================================
+
+Setelah selesai menggunakan admin panel, pastikan untuk logout:
+
+  1) Klik menu "Logout" berwarna merah di bagian bawah sidebar.
+  2) Anda akan dikembalikan ke halaman login.
+
+[PERINGATAN]
+Selalu logout setelah selesai, terutama jika menggunakan perangkat bersama 
+(shared device), untuk menjaga keamanan data jemaat.
+
+
+================================================================================
+11. FAQ — PERTANYAAN UMUM
+================================================================================
+
+T: Tidak bisa mengakses website?
+J: Pastikan perangkat terhubung ke internet. Coba bersihkan cache browser 
+   (Ctrl+Shift+Delete) dan muat ulang halaman. Pastikan alamat 
+   jadwal-iflc.freedev.app diketik dengan benar.
+
+T: Username / password tidak bisa masuk?
+J: Pastikan mengetik "admin" (huruf kecil semua) dan password "admin123" 
+   dengan benar. Perhatikan huruf besar/kecil. Jika masih gagal, 
+   hubungi tim pengembang.
+
+T: Jadwal tidak muncul di halaman publik?
+J: Pastikan jadwal berstatus "Mendatang". Jadwal berstatus "Selesai" atau 
+   "Dibatalkan" tidak ditampilkan di halaman publik.
+
+T: Petugas tidak bisa ditambahkan ke jadwal (muncul peringatan bentrok)?
+J: Ini bukan error — ini fitur Clash Detection yang bekerja dengan benar. 
+   Petugas tersebut sudah dijadwalkan di jadwal lain pada tanggal dan jam 
+   yang sama. Gunakan petugas pengganti atau hapus dulu penugasan di 
+   jadwal lain.
+
+T: Tampilan website terlihat berantakan?
+J: Pastikan koneksi internet stabil (aplikasi memuat styling dari CDN). 
+   Coba hard-refresh dengan Ctrl+Shift+R atau buka di browser lain.
+
+T: Bagaimana cara menghubungi tim pengembang?
+J: Hubungi pembimbing lapangan Bapak Jaya Sutanto atau salah satu anggota 
+   tim pengembang yang tercantum di halaman depan dokumen ini.
+
+
+================================================================================
+
+SIMJ IFLC — Sistem Informasi Manajemen Jemaat
+International Father Love Church — Satelit Semarang
+Menara Doa Pollux (Paragon Mall), Jl. Pemuda No. 118, Semarang
+
+Dikembangkan oleh Tim Workshop
+Program Studi Teknik Informatika
+Fakultas Ilmu Komputer, Universitas Katolik Soegijapranata Semarang
+Juli 2026
+
+================================================================================
